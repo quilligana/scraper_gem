@@ -1,9 +1,4 @@
 require "daft_scraper/version"
+require "mechanize"
+require File.expand_path(File.dirname(__FILE__) + '/scraper')
 
-module DaftScraper
-  class Scrape
-    def test_method
-      "Hello"
-    end
-  end
-end
