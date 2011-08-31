@@ -1,5 +1,9 @@
 require "daft_scraper/version"
 
 module DaftScraper
-  # Your code goes here...
+  class Scrape
+    def test_method
+      "Hello"
+    end
+  end
 end
