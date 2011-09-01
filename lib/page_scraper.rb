@@ -5,7 +5,16 @@ module DaftScraper
     end
 
     def price
-      @html.at("#smi-summary-items div").text.gsub(/\D/, '').to_i
+      price_text.gsub(/\D/, '').to_i
     end
+
+    def property_type
+      @html.at("#smi-summary-items :nth-child(2)").text
+    end
+
+    private
+      def price_text
+        @html.at("#smi-summary-items div").text[/\u20AC[0-9,]+/]
+      end
   end
 end

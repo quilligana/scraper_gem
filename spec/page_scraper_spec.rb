@@ -7,19 +7,30 @@ describe "Page Scraper" do
   before :all do
     @fixtures = [ 
       Fixture.new("clareview-park-galway"),
+      Fixture.new("malachy-conlon-park-armagh"),
       Fixture.new("belmaine-dublin-13")
     ]
   end
 
-  it "should scrape the price correctly" do
-    @fixtures.each do |fixture|
-      fixture.extracted.price.should == fixture.expected_price.to_i
+  describe "property_type extraction" do
+    it "should return the correct type" do
+      @fixtures.each do |f|
+        f.extracted.property_type.should == f.expected_property_type
+      end
     end
   end
 
-  it "shoud return an integer price" do
-    @fixtures.each do |fixture|
-      fixture.extracted.price.class.should == Fixnum
+  describe "price extraction" do
+    it "should scrape the price correctly" do
+      @fixtures.each do |fixture|
+        fixture.extracted.price.should == fixture.expected_price.to_i
+      end
+    end
+
+    it "shoud return an integer price" do
+      @fixtures.each do |fixture|
+        fixture.extracted.price.class.should == Fixnum
+      end
     end
   end
 end

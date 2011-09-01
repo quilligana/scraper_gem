@@ -8,9 +8,6 @@ class Fixture
   end
 
   def seed
-    puts @fixture_name
-    puts File.expand_path("spec/fixtures/#{@fixture_name}.txt")
-
     File.open(File.expand_path("fixtures/#{@fixture_name}.txt")) do |io|
       io.each_line do |line|
         split_line = line.split(' = ')

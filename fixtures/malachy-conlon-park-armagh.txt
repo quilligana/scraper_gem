@@ -1,0 +1,2 @@
+price = 452
+property_type = House to let
