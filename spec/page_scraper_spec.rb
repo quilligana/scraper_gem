@@ -12,6 +12,20 @@ describe "Page Scraper" do
     ]
   end
 
+  describe "daft_id extraction" do
+    it "should return a Fixnum" do
+      @fixtures.each do |f|
+        f.extracted.daft_id.class.should == Fixnum
+      end
+    end
+
+    it "should return the correct daft_id" do
+      @fixtures.each do |f|
+        f.extracted.daft_id.should == f.expected_daft_id.to_i
+      end
+    end
+  end
+
   describe "address extraction" do
     it "should return the correct address" do
       @fixtures.each do |f|

@@ -3,3 +3,4 @@ property_type = House to let
 bedrooms = 3
 bathrooms = 1
 address = Malachy Conlon Park, Cullaville, Crossmaglen, Co. Armagh
+daft_id = 1084831

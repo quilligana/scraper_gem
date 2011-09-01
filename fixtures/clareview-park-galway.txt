@@ -3,3 +3,4 @@ property_type = Apartment to let
 bedrooms = 4
 bathrooms = 2
 address = Clareview Park, Ballybane, Co. Galway
+daft_id = 1067719

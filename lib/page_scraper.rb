@@ -24,9 +24,17 @@ module DaftScraper
       @html.at("#address_box h2").text
     end
 
+    def daft_id
+      saved_add_link_href.match(/id=\d+/)[0].gsub(/\D/, '').to_i
+    end
+
     private
       def price_text
         @html.at("#smi-summary-items div").text[/\u20AC[0-9,]+/]
+      end
+
+      def saved_add_link_href
+        @html.at("#saved-ad a").attr("href")
       end
   end
 end
