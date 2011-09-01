@@ -12,6 +12,14 @@ describe "Page Scraper" do
     ]
   end
 
+  describe "address extraction" do
+    it "should return the correct address" do
+      @fixtures.each do |f|
+        f.extracted.address.should == f.expected_address
+      end
+    end
+  end
+
   describe "bathroom extraction" do
     it "should return a Fixnum" do
       @fixtures.each do |f|

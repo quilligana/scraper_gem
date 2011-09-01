@@ -20,6 +20,10 @@ module DaftScraper
       @html.at("#smi-summary-items :nth-child(6)").text[/\d/].to_i
     end
 
+    def address
+      @html.at("#address_box h2").text
+    end
+
     private
       def price_text
         @html.at("#smi-summary-items div").text[/\u20AC[0-9,]+/]
