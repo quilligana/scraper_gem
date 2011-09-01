@@ -1,4 +1,5 @@
 require File.expand_path("lib/daft_scraper")
+require File.expand_path("spec/support/fixture")
 
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
 ActiveRecord::Schema.define(:version => 1) do
