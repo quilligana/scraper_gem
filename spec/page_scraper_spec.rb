@@ -12,6 +12,20 @@ describe "Page Scraper" do
     ]
   end
 
+  describe "bathroom extraction" do
+    it "should return a Fixnum" do
+      @fixtures.each do |f|
+        f.extracted.bathrooms.class.should == Fixnum
+      end
+    end
+
+    it "should return the correct number of bathrooms" do
+      @fixtures.each do |f|
+        f.extracted.bathrooms.should == f.expected_bathrooms.to_i
+      end
+    end
+  end
+
   describe "bedroom extraction" do
     it "should return a Fixnum" do
       @fixtures.each do |f|

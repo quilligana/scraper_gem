@@ -1,3 +1,4 @@
 price = 850
 property_type = Apartment to let
 bedrooms = 2
+bathrooms = 1
