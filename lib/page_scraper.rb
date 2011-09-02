@@ -1,5 +1,5 @@
 module DaftScraper
-  class PageScraper < Scrape
+  class PageScraper < Scraper
     def initialize(url)
       super()
       @url = url

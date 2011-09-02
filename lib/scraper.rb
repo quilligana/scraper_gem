@@ -1,6 +1,9 @@
 module DaftScraper
   class Scraper
     attr_reader :agent
+    # Need to constrain the User Aliases Mechanize can use, otherwise it
+    # might decide to use an iPhone User Agent. If that happened, we would be served
+    # different HTML
     VIABLE_ALIASES = ["Windows IE 6", "Windows IE 7", "Windows Mozilla", "Mac Safari",
                      "Mac FireFox", "Mac Mozilla"]
 
@@ -20,6 +23,8 @@ module DaftScraper
     end
 
     private
+      # The mechanize aliases are outdated and therefore maight be suspicious
+      # The list of them is rather small too.
       def add_modern_aliases
         add_alias "Win7 Safari3",
           "Mozilla/5.0 (Windows; U; Windows NT 6.1; da) AppleWebKit/522.15.5 (KHTML, like Gecko) Version/3.0.3 Safari/522.15.5"
