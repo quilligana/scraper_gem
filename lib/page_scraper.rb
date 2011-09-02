@@ -6,9 +6,9 @@ module DaftScraper
       @agent.user_agent_alias = random_agent
     end
 
-    def scrape
-      @agent.get @url
-      PageExtractor.new(@agent.page)
+    def listing
+      # TODO we need to deal with daft returning a 404 in here
+      @listing ||= PageExtractor.new(@agent.get(@url))
     end
   end
 end

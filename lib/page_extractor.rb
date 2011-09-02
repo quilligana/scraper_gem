@@ -1,6 +1,6 @@
 module DaftScraper
   class PageExtractor
-    def initialize html
+    def initialize(html)
       @html = html
     end
 
