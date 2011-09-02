@@ -40,7 +40,7 @@ class Fixture
   end
 
   def extracted
-    @extracted ||= DaftScraper::PageScraper.new(parse_html)
+    @extracted ||= DaftScraper::PageExtractor.new(parse_html)
   end
 end
 
