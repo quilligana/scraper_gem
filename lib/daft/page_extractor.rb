@@ -4,6 +4,14 @@ module Daft
       @html = html
     end
 
+    def agent_name
+      @html.at(".first_ba_li h2").text
+    end
+
+    def agent_phone
+      @html.at("#phone_adv strong").text
+    end
+
     def price
       price_text.gsub(/\D/, '').to_i
     end

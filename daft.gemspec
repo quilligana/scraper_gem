@@ -25,5 +25,6 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "mechanize"
   s.add_runtime_dependency "activerecord"
+  s.add_runtime_dependency "activemodel"
   s.add_runtime_dependency "nokogiri"
 end

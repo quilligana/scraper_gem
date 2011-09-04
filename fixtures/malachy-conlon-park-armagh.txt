@@ -4,3 +4,5 @@ bedrooms = 3
 bathrooms = 1
 address = Malachy Conlon Park, Cullaville, Crossmaglen, Co. Armagh
 daft_id = 1084831
+agent_name = Loyal Lettings
+agent_phone = 0412134086

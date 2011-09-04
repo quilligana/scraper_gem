@@ -4,3 +4,5 @@ bedrooms = 2
 bathrooms = 1
 address = Belmayne P7, Balgriffin, Dublin 13
 daft_id = 1102145
+agent_name = Sales Team
+agent_phone = +353 1 66 10 100

@@ -4,3 +4,5 @@ bedrooms = 4
 bathrooms = 2
 address = Clareview Park, Ballybane, Co. Galway
 daft_id = 1067719
+agent_name = Naomi McComiskey
+agent_phone = 091565261

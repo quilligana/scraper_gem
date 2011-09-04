@@ -8,8 +8,37 @@ describe Daft::PageExtractor do
     @fixtures = [ 
       Fixture.new("clareview-park-galway"),
       Fixture.new("malachy-conlon-park-armagh"),
-      Fixture.new("belmaine-dublin-13")
+      Fixture.new("belmaine-dublin-13"),
+      Fixture.new("roseville-heights-donegal"),
     ]
+  end
+
+  describe "agent_phone extraction" do
+    it "should return a string" do
+      @fixtures.each do |f|
+        f.extracted.agent_phone.should be_instance_of String
+      end
+    end
+
+    it "should return the correct agent phone" do
+      @fixtures.each do |f|
+        f.extracted.agent_phone.should == f.expected_agent_phone
+      end
+    end
+  end
+
+  describe "agent name extraction" do
+    it "should return a string" do
+      @fixtures.each do |f|
+        f.extracted.agent_name.should be_instance_of String
+      end
+    end
+
+    it "should return the correct agent name" do
+      @fixtures.each do |f|
+        f.extracted.agent_name.should == f.expected_agent_name
+      end
+    end
   end
 
   describe "daft_id extraction" do
