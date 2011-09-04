@@ -8,5 +8,9 @@ module Daft
     def valid?
       true unless (url =~ URI::regexp).nil?
     end
+
+    def to_s
+      @url
+    end
   end
 end
