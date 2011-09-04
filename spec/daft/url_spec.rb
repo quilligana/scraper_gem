@@ -25,6 +25,11 @@ describe Daft::Url do
     let(:rental_url){ "http://www.daft.ie/searchrental.daft?id=1074495" }
     let(:sale_url){ "http://www.daft.ie/searchsale.daft?id=604241" }
 
+    it "should return a Fixnum" do
+      daft_id = Url.new(rental_url).id
+      daft_id.should be_instance_of Fixnum
+    end
+
     it "should extract the daft_id from a rental url" do
       daft_id = Url.new(rental_url).id
       daft_id.should == 1074495
