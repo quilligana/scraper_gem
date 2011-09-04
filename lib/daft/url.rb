@@ -12,5 +12,9 @@ module Daft
     def to_s
       @url
     end
+
+    def id
+      url.match(/id=\d+/)[0].gsub(/\D/, '').to_i
+    end
   end
 end
