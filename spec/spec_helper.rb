@@ -1,4 +1,4 @@
-require File.expand_path("lib/daft_scraper")
+require "daft"
 require File.expand_path("spec/support/fixture")
 require "fakeweb"
 

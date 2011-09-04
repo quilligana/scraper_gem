@@ -1,4 +1,4 @@
-module DaftScraper
+module Daft
   class Scraper
     attr_reader :agent
     # Need to constrain the User Aliases Mechanize can use, otherwise it

@@ -1,9 +1,9 @@
 # TODO look at outputting which fixture caused the error by passing an error
 # message to rspec.should
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require "spec_helper"
 
-describe "Page Scraper" do
-  include DaftScraper
+describe Daft::PageExtractor do
+  include Daft
   before :all do
     @fixtures = [ 
       Fixture.new("clareview-park-galway"),

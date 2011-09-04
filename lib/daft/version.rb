@@ -1,3 +1,3 @@
-module DaftScraper
+module Daft
   VERSION = "0.0.1"
 end

@@ -1,4 +1,4 @@
-module DaftScraper
+module Daft
   class PageScraper < Scraper
     def initialize(url)
       super()

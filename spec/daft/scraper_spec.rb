@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require "spec_helper"
 
-describe "Scrape" do
-  include DaftScraper
+describe Daft::Scraper do
+  include Daft
   let(:scraper){ Scraper.new }
 
   it "should start up a Mechanize agent on intialization" do

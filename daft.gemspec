@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "daft_scraper/version"
+require "daft/version"
 
 Gem::Specification.new do |s|
-  s.name        = "daft_scraper"
-  s.version     = DaftScraper::VERSION
+  s.name        = "daft"
+  s.version     = Daft::VERSION
   s.authors     = ["David Tuite"]
   s.email       = ["dtuite@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Gem to facilitate easy scraping of Daft property website}
+  s.description = %q{Gem to facilitate easy scraping of Daft property website}
 
-  s.rubyforge_project = "daft_scraper"
+  s.rubyforge_project = "daft"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
