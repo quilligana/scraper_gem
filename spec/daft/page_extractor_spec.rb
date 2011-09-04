@@ -13,6 +13,20 @@ describe Daft::PageExtractor do
     ]
   end
 
+  describe "photo url extraction" do
+    it "should return an array" do
+      @fixtures.each do |f|
+        f.extracted.photos.should be_instance_of Array
+      end
+    end
+
+    it "should get the correct number of photos" do
+      @fixtures.each do |f|
+        f.extracted.photos.size.should == f.expected_photo_count.to_i
+      end
+    end
+  end
+
   describe "agent_phone extraction" do
     it "should return a string" do
       @fixtures.each do |f|

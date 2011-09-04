@@ -1,7 +1,33 @@
 module Daft
+  class Photo
+    def initialize(noko_xml_el)
+      @photo = noko_xml_el
+    end
+
+    def src
+      @photo.attr("src")
+    end
+
+    def width
+      @photo.attr("width")
+    end
+
+    def height
+      @photo.attr("height")
+    end
+  end
+
   class PageExtractor
     def initialize(html)
       @html = html
+    end
+
+    def photos
+      photos = []
+      @html.search("div#pb_carousel li img").each do |img|
+        photos << Photo.new(img)
+      end
+      photos
     end
 
     def agent_name
