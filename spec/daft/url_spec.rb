@@ -13,4 +13,11 @@ describe Daft::Url do
       Url.new(url).should_not be_valid
     end
   end
+
+  describe "to_s" do
+    it "should return the url" do
+      url = "http://www.daft.ie/searchrental.daft?id=123456"
+      Url.new(url).to_s.should == url
+    end
+  end
 end
