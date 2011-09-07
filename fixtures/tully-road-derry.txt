@@ -1,0 +1,9 @@
+price = 177062
+property_type = Bungalow For Sale
+bedrooms = 3
+bathrooms = nil
+address = 32 Tully Road, Portglenone, Co. Derry, BT44 8DG
+daft_id = 614710
+agent_name = UPS Ballymena
+agent_phone = 0843 254 9723
+photo_count = 7
