@@ -1,0 +1,9 @@
+price = 1250000
+property_type = Detached House
+bedrooms = 6
+bathrooms = nil
+address = Saint Mary's, 68 Orwell Park, Rathgar, Dublin 6
+daft_id = 615516
+agent_name = Savills
+agent_phone = 01 6634300
+photo_count = 18

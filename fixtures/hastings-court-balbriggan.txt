@@ -1,0 +1,9 @@
+price = 145000
+property_type = End of Terrace House
+bedrooms = 2
+bathrooms = 3
+address = 13 Hastings Court - Type A, The Hastings, Balbriggan, Co. Dublin
+daft_id = 516785
+agent_name = Kingscroft Developments
+agent_phone = 1800 33 34 35
+photo_count = 8
