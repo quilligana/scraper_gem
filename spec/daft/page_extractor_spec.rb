@@ -15,6 +15,22 @@ describe Daft::PageExtractor do
     ]
   end
 
+  describe "rental period detection" do
+    it "should return false if the market is sales" do
+      @fixtures.each do |f|
+        f.extracted.rent_period.should == false if f.expected_market == 'sales'
+      end
+    end
+
+    it "should return the period if market is rental" do
+      @fixtures.each do |f|
+        if f.expected_market == 'rental'
+          f.extracted.rent_period.should == f.expected_rent_period
+        end
+      end
+    end
+  end
+
   describe "market extraction" do
     it "should return a string" do
       @fixtures.each do |f|

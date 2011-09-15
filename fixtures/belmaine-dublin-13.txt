@@ -8,3 +8,4 @@ agent_name = Sales Team
 agent_phone = +353 1 66 10 100
 photo_count = 5
 market = rental
+rent_period = monthly

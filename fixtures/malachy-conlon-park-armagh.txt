@@ -8,3 +8,4 @@ agent_name = Loyal Lettings
 agent_phone = 0412134086
 photo_count = 6
 market = rental
+rent_period = monthly

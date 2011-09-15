@@ -8,3 +8,4 @@ agent_name = Naomi McComiskey
 agent_phone = 091565261
 photo_count = 2
 market = rental
+rent_period = monthly

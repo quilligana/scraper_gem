@@ -1,0 +1,11 @@
+price = 100
+property_type = House to let
+bedrooms = 3
+bathrooms = 1
+address = Clohanes, Cree, Co. Clare
+daft_id = 1109588
+agent_name = Michael
+agent_phone = 086 1509752
+photo_count = 8
+market = rental
+rent_period = weekly
