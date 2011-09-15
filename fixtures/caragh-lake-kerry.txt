@@ -1,0 +1,10 @@
+price = nil
+property_type = Detached House
+bedrooms = 4
+bathrooms = 5
+address = Ard Na Sidhe Road, Caragh Lake, Co. Kerry
+daft_id = 613762
+agent_name = Ray
+agent_phone = 087 3291831
+photo_count = 26
+market = sales
