@@ -32,6 +32,7 @@ module Daft
 
     def rent_period
       return false unless market == 'rental'
+      price_text.text[/[a-zA-Z]+/].downcase
     end
 
     def photos
@@ -53,7 +54,7 @@ module Daft
     end
 
     def price
-      @price ||= price_text.gsub(/\D/, '').to_i
+      @price ||= price_digits.gsub(/\D/, '').to_i
     end
 
     def property_type
@@ -77,8 +78,12 @@ module Daft
     end
 
     private
+      def price_digits
+        @price_digits ||= price_text.text[/\u20AC[0-9,]+/]
+      end
+
       def price_text
-        @price_text ||= @html.at("#smi-summary-items div").text[/\u20AC[0-9,]+/]
+        @price_text ||= @html.at("#smi-summary-items div")
       end
 
       def saved_add_link_href
