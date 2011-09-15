@@ -5,15 +5,15 @@ module Daft
     end
 
     def src
-      @photo.attr("src")
+      @src ||= @photo.attr("src")
     end
 
     def width
-      @photo.attr("width")
+      @width ||= @photo.attr("width")
     end
 
     def height
-      @photo.attr("height")
+      @height ||= @photo.attr("height")
     end
   end
 
@@ -23,53 +23,58 @@ module Daft
     end
 
     def market
-      text = @html.at('#breadcrumbs a:nth-child(2)').text
-      text.gsub(/search /, '')
+      unless @market
+        text = @html.at('#breadcrumbs a:nth-child(2)').text
+        @market = text.gsub(/search /, '')
+      end
+      @market
     end
 
     def photos
-      photos = []
-      @html.search("div#pb_carousel li img").each do |img|
-        photos << Photo.new(img)
+      unless @photos
+        @photos = []
+        @html.search("div#pb_carousel li img").each do |img|
+          @photos << Photo.new(img)
+        end
       end
-      photos
+      @photos
     end
 
     def agent_name
-      @html.at(".first_ba_li h2").text
+      @agent_name ||= @html.at(".first_ba_li h2").text
     end
 
     def agent_phone
-      @html.at("#phone_adv strong").text
+      @agent_phone ||= @html.at("#phone_adv strong").text
     end
 
     def price
-      price_text.gsub(/\D/, '').to_i
+      @price ||= price_text.gsub(/\D/, '').to_i
     end
 
     def property_type
-      @html.at("#smi-summary-items :nth-child(2)").text
+      @property_type ||= @html.at("#smi-summary-items :nth-child(2)").text
     end
 
     def bedrooms
-      @html.at("#smi-summary-items :nth-child(4)").text[/\d/].to_i
+      @bedrooms ||= @html.at("#smi-summary-items :nth-child(4)").text[/\d/].to_i
     end
 
     def bathrooms
-      @html.at("#smi-summary-items :nth-child(6)").text[/\d/].to_i
+      @bathrooms ||= @html.at("#smi-summary-items :nth-child(6)").text[/\d/].to_i
     end
 
     def address
-      @html.at("#address_box h2").text
+      @address ||= @html.at("#address_box h2").text
     end
 
     def daft_id
-      saved_add_link_href.match(/id=\d+/)[0].gsub(/\D/, '').to_i
+      @daft_id ||= saved_add_link_href.match(/id=\d+/)[0].gsub(/\D/, '').to_i
     end
 
     private
       def price_text
-        @html.at("#smi-summary-items div").text[/\u20AC[0-9,]+/]
+        @price_text ||= @html.at("#smi-summary-items div").text[/\u20AC[0-9,]+/]
       end
 
       def saved_add_link_href
