@@ -7,3 +7,4 @@ daft_id = 1067719
 agent_name = Naomi McComiskey
 agent_phone = 091565261
 photo_count = 2
+market = rental

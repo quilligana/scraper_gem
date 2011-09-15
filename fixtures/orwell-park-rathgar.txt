@@ -7,3 +7,4 @@ daft_id = 615516
 agent_name = Savills
 agent_phone = 01 6634300
 photo_count = 18
+market = sales

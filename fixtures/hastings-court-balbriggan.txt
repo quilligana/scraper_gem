@@ -7,3 +7,4 @@ daft_id = 516785
 agent_name = Kingscroft Developments
 agent_phone = 1800 33 34 35
 photo_count = 8
+market = sales

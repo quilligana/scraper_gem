@@ -7,3 +7,4 @@ daft_id = 1102145
 agent_name = Sales Team
 agent_phone = +353 1 66 10 100
 photo_count = 5
+market = rental

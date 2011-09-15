@@ -15,6 +15,20 @@ describe Daft::PageExtractor do
     ]
   end
 
+  describe "market extraction" do
+    it "should return a string" do
+      @fixtures.each do |f|
+        f.extracted.market.should be_instance_of String
+      end
+    end
+
+    it "should return the market the listing is in" do
+      @fixtures.each do |f|
+        f.extracted.market.should == f.expected_market
+      end
+    end
+  end
+
   describe "photo url extraction" do
     it "should return an array" do
       @fixtures.each do |f|

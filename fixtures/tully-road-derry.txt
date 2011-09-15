@@ -7,3 +7,4 @@ daft_id = 614710
 agent_name = UPS Ballymena
 agent_phone = 0843 254 9723
 photo_count = 7
+market = sales

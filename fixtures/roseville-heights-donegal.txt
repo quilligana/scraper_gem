@@ -7,3 +7,4 @@ daft_id = 613230
 agent_name = DNG Dorrian
 agent_phone = 0749731291 or 0749731140
 photo_count = 13
+market = sales

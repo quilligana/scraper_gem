@@ -22,6 +22,11 @@ module Daft
       @html = html
     end
 
+    def market
+      text = @html.at('#breadcrumbs a:nth-child(2)').text
+      text.gsub(/search /, '')
+    end
+
     def photos
       photos = []
       @html.search("div#pb_carousel li img").each do |img|
