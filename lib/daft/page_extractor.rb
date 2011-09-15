@@ -31,7 +31,7 @@ module Daft
     end
 
     def rent_period
-      return false unless market == 'rental'
+      return unless market == 'rental'
       price_text.text[/[a-zA-Z]+/].downcase
     end
 
@@ -60,7 +60,8 @@ module Daft
     end
 
     def price
-      @price ||= price_digits.gsub(/\D/, '').to_i
+      return if price_digits.nil?
+      price_digits.gsub(/\D/, '').to_i
     end
 
     def property_type

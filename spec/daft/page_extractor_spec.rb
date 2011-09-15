@@ -21,7 +21,7 @@ describe Daft::PageExtractor do
   describe "rental period detection" do
     it "should return false if the market is sales" do
       @fixtures.each do |f|
-        f.extracted.rent_period.should == false if f.expected_market == 'sales'
+        f.extracted.rent_period.should be_nil if f.expected_market == 'sales'
       end
     end
 
@@ -153,15 +153,19 @@ describe Daft::PageExtractor do
   end
 
   describe "price extraction" do
-    it "should scrape the price correctly" do
+    it "should scrape the price correctly if there is one" do
       @fixtures.each do |fixture|
-        fixture.extracted.price.should == fixture.expected_price.to_i
+        unless fixture.expected_price = 'nil'
+          fixture.extracted.price.should == fixture.expected_price.to_i
+        end
       end
     end
 
-    it "shoud return an integer price" do
-      @fixtures.each do |fixture|
-        fixture.extracted.price.class.should == Fixnum
+    it "should return nil if there is none" do
+      @fixtures.each do |f|
+        if f.expected_price == 'nil'
+          f.extracted.price.should be_nil
+        end
       end
     end
   end
