@@ -1,0 +1,11 @@
+price = 575
+property_type = Apartment to let
+bedrooms = 2
+bathrooms = 2
+address = Bruach Na HAbhainn, Quin Road, Ennis, Co. Clare
+daft_id = 1112321
+agent_name = Eoin
+agent_phone = 086 2780929
+photo_count = 5
+market = rental
+rent_period = monthly

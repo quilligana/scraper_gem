@@ -13,6 +13,7 @@ describe Daft::PageExtractor do
       Fixture.new("hastings-court-balbriggan"),
       Fixture.new("orwell-park-rathgar"),
       Fixture.new("cohanes-clare"),
+      Fixture.new("bruach-ennis-clare"),
     ]
   end
 
