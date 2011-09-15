@@ -30,6 +30,10 @@ module Daft
       @market
     end
 
+    def rent_period
+      return false unless market == 'rental'
+    end
+
     def photos
       unless @photos
         @photos = []
