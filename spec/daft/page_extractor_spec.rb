@@ -112,15 +112,19 @@ describe Daft::PageExtractor do
   end
 
   describe "bathroom extraction" do
-    it "should return a Fixnum" do
+    it "should return the correct number of bathrooms if there are any" do
       @fixtures.each do |f|
-        f.extracted.bathrooms.class.should == Fixnum
+        unless f.expected_bathrooms == 'nil'
+          f.extracted.bathrooms.should == f.expected_bathrooms.to_i
+        end
       end
     end
 
-    it "should return the correct number of bathrooms" do
+    it "should return nil if there are none" do
       @fixtures.each do |f|
-        f.extracted.bathrooms.should == f.expected_bathrooms.to_i
+        if f.expected_bathrooms == 'nil'
+          f.extracted.bathrooms.should be_nil
+        end
       end
     end
   end

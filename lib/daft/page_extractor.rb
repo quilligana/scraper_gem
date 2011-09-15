@@ -72,7 +72,9 @@ module Daft
     end
 
     def bathrooms
-      @bathrooms ||= @html.at("#smi-summary-items :nth-child(6)").text[/\d/].to_i
+      bathrooms_el = @html.at("#smi-summary-items :nth-child(6)")
+      return unless bathrooms_el.text[/\d Ba/]
+      @bathrooms = bathrooms_el.text[/\d/].to_i
     end
 
     def address
