@@ -46,7 +46,13 @@ module Daft
     end
 
     def agent_name
-      @agent_name ||= @html.at(".first_ba_li h2").text
+      unless @agent_name
+        @agent_name = @html.at(".first_ba_li h2").text
+        if @agent_name =~ /Advertiser details/
+          @agent_name = @html.at("#smi-sidebar li:nth-child(2)").text[/\w+/]
+        end
+      end
+      @agent_name
     end
 
     def agent_phone
