@@ -1,16 +1,16 @@
 module Daft
   class AreasExtractor
+    attr_reader :html
     def initialize(html)
       @html = html
     end
 
     def areas
-      unless @areas
-        @areas = @html.search("#a_id option").map do |option|
-          AreaOption.new(option)
-        end
-      end
-      @areas # array of names of areas in the select box
+      @areas = options.map{|option| AreaOption.new(option) }.delete_if {|a| a.invalid? }
+    end
+
+    def options
+      @options ||= html.search("#a_id option")
     end
   end
 
