@@ -6,7 +6,7 @@ module Daft
     end
 
     def areas
-      @areas = options.map{|option| AreaOption.new(option) }.delete_if {|a| a.invalid? }
+      @areas ||= options.map{|option| AreaOption.new(option) }.delete_if {|a| a.invalid? }
     end
 
     def options
@@ -29,7 +29,7 @@ module Daft
     end
 
     def invalid?
-      option_html.text =~ /^-/ || value.blank?
+      option_html.text =~ /^-/ || value == ""
     end
   end
 end
