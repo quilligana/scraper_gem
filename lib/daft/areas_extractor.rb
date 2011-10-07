@@ -7,8 +7,7 @@ module Daft
     def areas
       unless @areas
         @areas = @html.search("#a_id option").map do |option|
-          area = AreaOption.new(option)
-          area.name unless area.invalid?
+          AreaOption.new(option)
         end
       end
       @areas # array of names of areas in the select box
