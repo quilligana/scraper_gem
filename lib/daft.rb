@@ -1,9 +1,10 @@
-require "daft/version"
 require "mechanize"
 require "active_record"
-require "daft/url"
-require "daft/scraper"
-require "daft/page_extractor"
-require "daft/page_scraper"
-require "daft/areas_extractor"
 
+require File.dirname(__FILE__) + '/daft/version'
+require File.dirname(__FILE__) + '/daft/scraper'
+require File.dirname(__FILE__) + '/daft/url'
+require File.dirname(__FILE__) + '/daft/page_extractor'
+require File.dirname(__FILE__) + '/daft/page_scraper'
+require File.dirname(__FILE__) + '/daft/areas_extractor'
+require File.dirname(__FILE__) + '/daft/areas_scraper'

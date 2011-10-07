@@ -25,4 +25,22 @@ describe Daft::AreasExtractor do
       end
     end
   end
+
+  describe "dublin" do
+    before :each do
+      @dub = AreaFixture.new 'buying_search_results/dublin'
+    end
+
+    it "should include AdamsTown" do
+      @dub.extracted.areas.should include_area "Adamstown"
+    end
+
+    it "should include Windy Arbour" do
+      @dub.extracted.areas.should include_area "Windy Arbour"
+    end
+
+    it "should not include NDC" do
+      @dub.extracted.areas.should_not include_area "- North Dublin City -"
+    end
+  end
 end
