@@ -44,3 +44,13 @@ class Fixture
   end
 end
 
+class AreaFixture < Fixture
+  def initialize(fixture_name)
+    @fixture_name = fixture_name
+  end
+
+  def extracted
+    @extracted ||= Daft::AreasExtractor.new(parse_html)
+  end
+end
+

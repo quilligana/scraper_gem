@@ -5,4 +5,5 @@ require "daft/url"
 require "daft/scraper"
 require "daft/page_extractor"
 require "daft/page_scraper"
+require "daft/areas_extractor"
 
